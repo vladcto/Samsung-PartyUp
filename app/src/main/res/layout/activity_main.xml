@@ -16,14 +16,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:background="@drawable/border_up"
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="wrap_content"
             android:paddingLeft="15dp"
             android:paddingTop="11dp"
             android:paddingBottom="17dp"
             android:text="@string/Feed"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textSize="24sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -43,6 +45,7 @@
             android:layout_height="84dp"
             android:layout_marginLeft="-2dp"
             android:layout_marginRight="-2dp"
+            android:layout_marginBottom="-2dp"
             android:layout_weight="0"
             android:background="@drawable/border_gray"
             android:orientation="horizontal">
@@ -51,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <ImageView
@@ -64,13 +68,16 @@
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:gravity="center|top"
+                    android:text="@string/Home"
+                    android:textColor="@color/colorFont" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <ImageView
@@ -84,13 +91,16 @@
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:gravity="center|top"
+                    android:text="@string/People"
+                    android:textColor="@color/colorFont" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <ImageView
@@ -104,13 +114,16 @@
                     android:id="@+id/textView9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:gravity="center|top"
+                    android:text="@string/Messages"
+                    android:textColor="@color/colorFont" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <ImageView
@@ -124,13 +137,16 @@
                     android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:gravity="center|top"
+                    android:text="@string/PartyMap"
+                    android:textColor="@color/colorSelectFont" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:clickable="true"
                 android:orientation="vertical">
 
                 <ImageView
@@ -144,7 +160,10 @@
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:layout_gravity="center"
+                    android:gravity="center|top"
+                    android:text="@string/Profiles"
+                    android:textColor="@color/colorFont" />
             </LinearLayout>
         </LinearLayout>
 

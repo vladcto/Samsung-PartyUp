@@ -6,13 +6,15 @@ public class PartyInfo {
     private String textDate;
     private String textTime;
     private String textGeo;
+    private String textPlace;
 
-    public PartyInfo(int imageParty, String textDescription, String textDate, String textTime, String textGeo) {
+    public PartyInfo(int imageParty, String textDescription,String textPlace, String textDate, String textTime, String textGeo) {
         this.imageParty = imageParty;
         this.textDescription = textDescription;
         this.textDate = textDate;
         this.textTime = textTime;
         this.textGeo = textGeo;
+        this.textPlace = textPlace;
     }
 
     public int getImageParty() {
@@ -34,4 +36,6 @@ public class PartyInfo {
     public String getTextGeo() {
         return textGeo;
     }
+
+    public String getTextPlace(){return textPlace;}
 }

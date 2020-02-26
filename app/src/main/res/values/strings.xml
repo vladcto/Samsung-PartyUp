@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Samsung - PartyUp</string>
     <string name="Feed">Feed</string>
+    <string name="Home">Home</string>
+    <string name="People">People</string>
+    <string name="Messages">Messages</string>
+    <string name="PartyMap">Party Map</string>
+    <string name="Profiles">Profiles</string>
 </resources>

@@ -45,6 +45,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         private TextView textDate;
         private TextView textTime;
         private TextView textGeo;
+        private TextView textPlace;
 
         public ViewHolder(View items){
             super(items);
@@ -53,6 +54,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             textDate = items.findViewById(R.id.textDate);
             textTime = items.findViewById(R.id.textTime);
             textGeo = items.findViewById(R.id.textGeo);
+            textPlace = items.findViewById(R.id.textPlace);
         }
 
         public void bind(PartyInfo _party){
@@ -61,6 +63,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             textDate.setText(_party.getTextDate());
             textTime.setText(_party.getTextTime());
             textGeo.setText(_party.getTextGeo());
+            textPlace.setText(_party.getTextPlace());
         }
     }
 }
