@@ -1,10 +1,13 @@
 package com.example.samsung_partyup;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,7 +16,11 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     private ArrayList<PartyInfo> party = new ArrayList<PartyInfo>();
+    private MainActivity context;
 
+    public Adapter(MainActivity context){
+        this.context = context;
+    }
     @Override
     public  ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
@@ -57,8 +64,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             textPlace = items.findViewById(R.id.textPlace);
         }
 
-        public void bind(PartyInfo _party){
+        public void bind(final PartyInfo _party){
             //imageParty.setImageURI();
+
+            imageParty.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent partyInfo = new Intent(context,PartyInfoActivity.class);
+                    partyInfo.putExtra("partyName",_party.getTextDescription());
+                    partyInfo.putExtra("aboutParty",_party.getAboutParty());
+                    context.startPartyInfo(partyInfo);
+                }
+            });
+
             textDescription.setText(_party.getTextDescription());
             textDate.setText(_party.getTextDate());
             textTime.setText(_party.getTextTime());
