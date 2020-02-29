@@ -6,7 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/fiolt_button"
+        app:cardBackgroundColor="#6979F8"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/addImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="100dp"
+            android:padding="6dp"
+            app:srcCompat="@drawable/ic_add_white_24dp" />
+    </androidx.cardview.widget.CardView>
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -16,10 +41,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:background="@drawable/border_up"
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_up"
             android:paddingLeft="15dp"
             android:paddingTop="11dp"
             android:paddingBottom="17dp"
@@ -36,11 +61,13 @@
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
             android:layout_weight="1"
-            android:isScrollContainer="false">
+            android:isScrollContainer="false"
+            tools:listitem="@android:layout/simple_list_item_1">
 
         </androidx.recyclerview.widget.RecyclerView>
 
         <LinearLayout
+            android:id="@+id/bottomToolbar"
             android:layout_width="match_parent"
             android:layout_height="84dp"
             android:layout_marginLeft="-2dp"
@@ -51,6 +78,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -74,6 +102,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/people"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -97,6 +126,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/messages"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -120,6 +150,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/PartyMap"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -143,6 +174,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/Profiles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

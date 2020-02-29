@@ -7,4 +7,5 @@
     <color name="colorGrayBorder">#8D8D8D</color>
     <color name="colorFont">#ACB1C0</color>
     <color name="colorSelectFont">#FF2D55</color>
+    <color name="White">#FFFFFF</color>
 </resources>
