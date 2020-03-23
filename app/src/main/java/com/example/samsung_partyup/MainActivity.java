@@ -21,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(this);
         recyclerView.setAdapter(adapter);
 
-        adapter.setItems(new PartyInfo(0,"Смотрим Тарантино на Невском",
+        adapter.setItems(new PartyInfo(R.drawable.test,"Смотрим Тарантино на Невском",
                 "Россия,Санкт-Петербург","04 апр.",
                 "21:45","127 м.","a"));
-        adapter.setItems(new PartyInfo(0,"aваы",
+        adapter.setItems(new PartyInfo(R.drawable.test,"aваыwrerwerewrwerwerwerwerwerwerwerwerewrwrewrrwerewrwre",
                 "12","b",
                 "f","s","a"));
-        adapter.setItems(new PartyInfo(0,"aыва",
+        adapter.setItems(new PartyInfo(R.drawable.test,"aыва",
                 "12","b",
                 "f","s","a"));
-        adapter.setItems(new PartyInfo(0,"aфыввфы",
+        adapter.setItems(new PartyInfo(R.drawable.test,"aфыввфы",
                 "12","b",
                 "f","s","a"));
-        adapter.setItems(new PartyInfo(0,"уй123фвыa",
+        adapter.setItems(new PartyInfo(R.drawable.test,"уй123фвыa",
                 "12","b",
                 "f","s","a"));
     }

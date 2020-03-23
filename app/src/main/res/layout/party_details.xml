@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -20,20 +20,23 @@
         app:srcCompat="?attr/colorError" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="135dp"
-        android:layout_height="5dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="120dp"
         android:layout_marginLeft="120dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
         android:layout_marginBottom="8dp"
+        android:saveEnabled="false"
         app:cardBackgroundColor="#5C5C5C"
         app:cardCornerRadius="10px"
         app:cardElevation="0dp"
         app:cardMaxElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button2"
@@ -59,8 +62,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="46dp"
         android:background="@drawable/border"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
+        app:layout_constraintEnd_toEndOf="@+id/background"
         app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
 
     <TextView
@@ -74,7 +77,7 @@
         android:layout_marginBottom="234dp"
         android:text="TextView"
         android:textColor="@color/colorBorder"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -90,7 +93,7 @@
         android:text="TextView"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/AboutParty"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

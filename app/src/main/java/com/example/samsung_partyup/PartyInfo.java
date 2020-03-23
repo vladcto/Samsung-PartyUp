@@ -27,6 +27,7 @@ public class PartyInfo {
     public String getAboutParty(){
         return aboutParty;
     }
+
     public String getTextDescription() {
         return textDescription;
     }

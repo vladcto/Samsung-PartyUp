@@ -18,6 +18,7 @@ public class PartyInfoActivity extends AppCompatActivity {
     TextView aboutParty;
     ImageView closePartyInfo;
     Activity partyInfoActivity;
+    ImageView background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,8 @@ public class PartyInfoActivity extends AppCompatActivity {
         partyName.setText(infos.getString("partyName"));
         aboutParty = findViewById(R.id.AboutParty);
         aboutParty.setText(infos.getString("aboutParty"));
+        background = findViewById(R.id.background);
+        background.setImageResource(infos.getInt("image"));
         partyInfoActivity = this;
         closePartyInfo = findViewById(R.id.closePartyInfo);
         closePartyInfo.setOnClickListener(new View.OnClickListener() {

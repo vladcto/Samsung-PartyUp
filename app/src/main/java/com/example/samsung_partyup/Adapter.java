@@ -65,7 +65,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
 
         public void bind(final PartyInfo _party){
-            //imageParty.setImageURI();
+            imageParty.setImageResource(_party.getImageParty());
 
             imageParty.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,6 +73,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                     Intent partyInfo = new Intent(context,PartyInfoActivity.class);
                     partyInfo.putExtra("partyName",_party.getTextDescription());
                     partyInfo.putExtra("aboutParty",_party.getAboutParty());
+                    partyInfo.putExtra("image",_party.getImageParty());
                     context.startPartyInfo(partyInfo);
                 }
             });
