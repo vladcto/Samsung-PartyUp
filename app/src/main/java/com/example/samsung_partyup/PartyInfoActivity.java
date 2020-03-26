@@ -39,6 +39,5 @@ public class PartyInfoActivity extends AppCompatActivity {
                 partyInfoActivity.finish();
             }
         });
-
     }
 }

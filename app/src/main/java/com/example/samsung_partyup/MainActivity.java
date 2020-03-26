@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter.setItems(new PartyInfo(R.drawable.test,"Смотрим Тарантино на Невском",
                 "Россия,Санкт-Петербург","04 апр.",
-                "21:45","127 м.","a"));
+                "21:45","127 м.","a",new String[]{"19+","Бесплатно","dasd","sds"}));
         adapter.setItems(new PartyInfo(R.drawable.ramstain,"Раммштайн",
                 "Россия,Санкт-Петербург,Футбольная ал., дом 8","12 апр.",
                 "19:00","11,5 км.","N/A"));

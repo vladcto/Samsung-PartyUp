@@ -16,16 +16,31 @@
         android:background="@drawable/border"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageParty"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="128dp"
-            android:layout_gravity="bottom"
-            android:adjustViewBounds="false"
-            android:background="@drawable/border_up"
-            android:cropToPadding="true"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/test" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageParty"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_gravity="bottom"
+                android:adjustViewBounds="false"
+                android:background="@drawable/border_up"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/test" />
+
+            <LinearLayout
+                android:id="@+id/partyAttrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"></LinearLayout>
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
