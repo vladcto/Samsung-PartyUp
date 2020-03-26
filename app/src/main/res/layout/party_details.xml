@@ -90,8 +90,12 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="17dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:text="TextView"
         android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/AboutParty"
         app:layout_constraintEnd_toEndOf="@+id/background"
         app:layout_constraintStart_toStartOf="parent" />
@@ -102,9 +106,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/event_bacground"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:text="Event"
         android:textColor="@android:color/background_light"
+        android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/PartyName"
         app:layout_constraintStart_toStartOf="parent" />
 

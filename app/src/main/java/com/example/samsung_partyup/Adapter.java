@@ -99,15 +99,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
                     TextView textView = new TextView(context);
                     textView.setText(attr);
-                    int pixels_height = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, context.getResources().getDisplayMetrics());
-                    int pixels_pading = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, context.getResources().getDisplayMetrics());
-                    int pixels_margin = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, context.getResources().getDisplayMetrics());
                     textView.setGravity(Gravity.CENTER);
                     textView.setTextColor(Color.WHITE);
                     textView.setTextSize(10);
                     textView.setBackgroundResource(R.drawable.party_attr_background);
+                    //Привожу DP к пикселям
+                    int pixels_pading = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, context.getResources().getDisplayMetrics());
                     textView.setPadding(pixels_pading,0,pixels_pading,0);
+                    //Привожу DP к пикселям
+                    int pixels_height = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, context.getResources().getDisplayMetrics());
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,pixels_height);
+                    //Привожу DP к пикселям
+                    int pixels_margin = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, context.getResources().getDisplayMetrics());
                     layoutParams.setMargins(pixels_margin,0,pixels_margin,0);
                     textView.setLayoutParams(layoutParams);
                     attrLayout.addView(textView);
