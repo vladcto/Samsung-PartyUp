@@ -3,6 +3,7 @@ package com.example.samsung_partyup;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -98,16 +99,16 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
                     TextView textView = new TextView(context);
                     textView.setText(attr);
-                    final float scale = context.getResources().getDisplayMetrics().density;
-                    int pixels = (int) (20 * scale + 0.5f);
-                    textView.setHeight(pixels);
+                    int pixels_height = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, context.getResources().getDisplayMetrics());
+                    int pixels_pading = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, context.getResources().getDisplayMetrics());
+                    int pixels_margin = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, context.getResources().getDisplayMetrics());
                     textView.setGravity(Gravity.CENTER);
                     textView.setTextColor(Color.WHITE);
-                    textView.setTextSize(8);
+                    textView.setTextSize(10);
                     textView.setBackgroundResource(R.drawable.party_attr_background);
-                    textView.setPadding(2,0,2,0);
-                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,pixels);
-                    layoutParams.setMargins(2,0,2,0);
+                    textView.setPadding(pixels_pading,0,pixels_pading,0);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,pixels_height);
+                    layoutParams.setMargins(pixels_margin,0,pixels_margin,0);
                     textView.setLayoutParams(layoutParams);
                     attrLayout.addView(textView);
                 }

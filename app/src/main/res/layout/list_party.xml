@@ -37,8 +37,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingLeft="16dp"
-                android:paddingTop="16dp"
-                android:paddingRight="16dp"></LinearLayout>
+                android:paddingTop="12dp"
+                android:paddingRight="12dp" />
 
         </FrameLayout>
 
