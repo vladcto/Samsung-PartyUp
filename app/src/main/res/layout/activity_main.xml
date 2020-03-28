@@ -80,6 +80,7 @@
                     tools:listitem="@android:layout/simple_list_item_1">
 
                 </androidx.recyclerview.widget.RecyclerView>
+
             </LinearLayout>
         </ScrollView>
 
@@ -222,7 +223,7 @@
         android:id="@+id/view"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/shadow_for_fiolt_button"
         app:layout_constraintEnd_toEndOf="@+id/imageButton3"
         app:layout_constraintStart_toStartOf="@+id/imageButton3"
