@@ -91,7 +91,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="40dp"
                     android:ellipsize="end"
-                    android:maxLines="1"
+                    android:maxLines="2"
                     android:paddingTop="2dp"
                     android:text="TextView"
                     android:textSize="14sp" />
