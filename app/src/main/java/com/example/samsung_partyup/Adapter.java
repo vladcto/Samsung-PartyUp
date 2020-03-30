@@ -51,7 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imageParty;
-        private TextView textDescription;
+        private TextView textNameParty;
         private TextView textDate;
         private TextView textTime;
         private TextView textGeo;
@@ -61,7 +61,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public ViewHolder(View items){
             super(items);
             imageParty = items.findViewById(R.id.imageParty);
-            textDescription = items.findViewById(R.id.textDescrip);
+            textNameParty = items.findViewById(R.id.textDescrip);
             textDate = items.findViewById(R.id.textDate);
             textTime = items.findViewById(R.id.textTime);
             textGeo = items.findViewById(R.id.textGeo);
@@ -70,34 +70,35 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
 
         public void bind(final PartyInfo _party){
-            imageParty.setImageResource(_party.getImageParty());
-
             imageParty.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent partyInfo = new Intent(context,PartyInfoActivity.class);
-                    partyInfo.putExtra("partyName",_party.getTextDescription());
+                    partyInfo.putExtra("partyName",_party.getTextPartyName());
                     partyInfo.putExtra("aboutParty",_party.getAboutParty());
                     partyInfo.putExtra("image",_party.getImageParty());
                     context.startPartyInfo(partyInfo);
                 }
             });
 
-            textDescription.setText(_party.getTextDescription());
+            imageParty.setImageResource(_party.getImageParty());
+            textNameParty.setText(_party.getTextPartyName());
             textDate.setText(_party.getTextDate());
             textTime.setText(_party.getTextTime());
             textGeo.setText(_party.getTextGeo());
             textPlace.setText(_party.getTextPlace());
 
             String[] partyAttr = _party.getPartyAttr();
+            //Есть ли вообще атрибуты к вечеринке?
             if(partyAttr != null && partyAttr.length!=0){
                 for (String attr:partyAttr) {
-
+                    //Для каждого атрибута создаю TextView c нунжными натсройками.
                     TextView textView = new TextView(context);
                     textView.setText(attr);
                     textView.setGravity(Gravity.CENTER);
                     textView.setTextColor(Color.WHITE);
                     textView.setTextSize(10);
+                    //Ставлю серый, полупрозрачный фон для TextView
                     textView.setBackgroundResource(R.drawable.party_attr_background);
                     //Привожу DP к пикселям
                     int pixels_pading = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, context.getResources().getDisplayMetrics());
